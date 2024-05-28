@@ -1,0 +1,176 @@
+管理员接口
+	管理员登录 - 请求方式 [post]
+		http://127.0.0.1:8008/api/adm/login
+		请求示例 [json]
+		{
+			"name": "DR",
+			"password": "123456"
+		}
+
+	获取管理员 - 请求方式 [get]
+		http://127.0.0.1:8008/api/adm/getById?id=1
+
+	管理员列表 - 请求方式 [get]
+		http://127.0.0.1:8008/api/adm/list
+
+	添加管理员 - 请求方式 [post]
+		http://127.0.0.1:8008/api/adm/add
+		请求示例 [json]
+		{
+			"name": "David",
+			"password": "123456",
+			"create_time": "2024-03-21 12:10:00"
+		}
+
+	编辑管理员 - 请求方式 [post]
+		http://127.0.0.1:8008/api/adm/edit
+		请求示例 [json]
+		{
+			"id": "1",
+			"password": "888888"
+		}
+
+	删除管理员 - 请求方式 [post]
+		http://127.0.0.1:8008/api/adm/del
+		请求示例 [json]
+		{
+			"id": "1"
+		}
+			或
+		{
+			"id": "2,3"
+		}
+
+
+类别接口
+	类别列表 - 请求方式 [get]
+		http://127.0.0.1:8008/api/category/list?id=1
+
+	获取类别 - 请求方式 [get]
+		http://127.0.0.1:8008/api/category/getById?id=1
+		http://127.0.0.1:8008/api/category/getListByParentId?parent_id=1
+
+	添加类别 - 请求方式 [post]
+		http://127.0.0.1:8008/api/category/add
+		请求示例 [json]
+		{
+			"parent_id": "1",
+			"name": "测试",
+			"level": "2",
+			"content": "内容测试",
+			"sort": "0",
+			"status": "1",
+			"create_time": "2024-03-21 12:10:00"
+		}
+
+	编辑类别 - 请求方式 [post]
+		http://127.0.0.1:8008/api/category/edit
+		请求示例 [json]
+		{
+			"id": "1",
+			"name": "类别",
+			"update_time": "2024-03-21 12:10:00"
+		}
+
+	删除类别 - 请求方式 [post]
+		http://127.0.0.1:8008/api/category/del
+		请求示例 [json]
+		{
+			"id": "1"
+		}
+			或
+		{
+			"id": "2,3"
+		}
+
+
+文章接口
+	文章分页 - 请求方式 [get]
+		http://127.0.0.1:8008/api/article/pageList?page=1&pageSize=2
+
+	获取文章 - 请求方式 [get]
+		http://127.0.0.1:8008/api/article/getById?id=1
+
+	添加文章 - 请求方式 [post]
+		http://127.0.0.1:8008/api/article/add
+		请求示例 [json]
+		{
+			"category_id": "2",
+			"title": "Vue3后台管理系统",
+			"author": "邓瑞",
+			"url": "dengruicode.com",
+			"create_time": "2024-03-20 19:30:00"
+		}
+
+	编辑文章 - 请求方式 [post]
+		http://127.0.0.1:8008/api/article/edit
+		请求示例 [json]
+		{
+			"id": "1",
+			"title": "Vue内容管理系统",
+			"url": "www.dengruicode.com"
+		}
+
+	删除文章 - 请求方式 [post]
+		http://127.0.0.1:8008/api/article/del
+		请求示例 [json]
+		{
+			"id": "1"
+		}
+			或
+		{
+			"id": "2,3"
+		}
+
+	上传图片 - 请求方式 [post]
+		http://127.0.0.1:8008/api/article/uploadImg
+
+	上传图片(wangEditor) - 请求方式 [post]
+		http://127.0.0.1:8008/api/article/wangEditor/uploadImg
+
+导航接口
+	导航列表 - 请求方式 [get]
+		http://127.0.0.1:8008/api/nav/list?id=1
+
+	导航树 - 请求方式 [get]
+		http://127.0.0.1:8008/api/nav/tree
+
+	获取导航 - 请求方式 [get]
+		http://127.0.0.1:8008/api/nav/getById?id=1
+		http://127.0.0.1:8008/api/nav/getListByParentId?parent_id=1
+
+	添加导航 - 请求方式 [post]
+		http://127.0.0.1:8008/api/nav/add
+		请求示例 [json]
+		{
+			"parent_id": "0",
+			"name": "文章",
+			"icon": "Document",
+			"path": "/nav/list",
+			"level": "2",
+			"sort": "0",
+			"status": "1",
+			"create_time": "2024-03-21 12:10:00"
+		}
+
+	编辑导航 - 请求方式 [post]
+		http://127.0.0.1:8008/api/nav/edit
+		请求示例 [json]
+		{
+			"id": "1",
+			"name": "类别",
+			"icon": "Files",
+			"path": "/category/list",			
+			"update_time": "2024-03-21 12:10:00"
+		}
+
+	删除导航 - 请求方式 [post]
+		http://127.0.0.1:8008/api/nav/del
+		请求示例 [json]
+		{
+			"id": "1"
+		}
+			或
+		{
+			"id": "2,3"
+		}

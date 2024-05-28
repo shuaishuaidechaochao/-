@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+          "@/*": ["备份/src/*"] // 配置 @ 符号指向 src 目录及其子目录
+      }
+  }
+}
